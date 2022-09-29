@@ -45,4 +45,6 @@ function playComposition(songArray) {
     }
 }
 
-
+// function clicou() {
+//     document.querySelector('.legendas li  ul').style.display = "block";
+// }
