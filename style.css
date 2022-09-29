@@ -19,6 +19,12 @@ h1 {
     color: #FFF;
     margin-bottom: 20px;
 }
+
+h2 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
 .keys {
     background-color: rgba(0, 0, 0, 0.2);
     display: grid;
