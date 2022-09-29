@@ -10,7 +10,8 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url(290035739_3328210737496869_852600976772376559_n.jpg);
-    background-position: top;
+    background-position: top center;
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
