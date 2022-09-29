@@ -1,6 +1,13 @@
 document.body.addEventListener('keypress', (event)=>{
-    playsSound(event.code.toLowerCase());
+    playSound(event.code.toLowerCase());
 });
+
+document.querySelectorAll('.key').forEach(element => {
+    element.addEventListener('click', () => {
+      const clickedKey = element.getAttribute('data-key')
+      playSound(clickedKey)
+    })
+  });
 
 document.querySelector('.composer button').addEventListener('click', ()=> {
     let song = document.querySelector('#input').value;
@@ -10,7 +17,7 @@ document.querySelector('.composer button').addEventListener('click', ()=> {
     }
 });
 
-function playsSound(sound) {
+function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
     let keyElement = document.querySelector(`div[data-key="${sound}"]`);
 
@@ -23,7 +30,7 @@ function playsSound(sound) {
         keyElement.classList.add('active');
         setTimeout(()=>{
             keyElement.classList.remove('active');
-        },300)
+        },200);
     }
 }
 
@@ -32,8 +39,10 @@ function playComposition(songArray) {
 
     for(let songItem of songArray) {
         setTimeout(() => {
-            playsSound(`numpad${songItem}`);
+            playSound(`numpad${songItem}`);
         }, wait);
         wait +=250;
     }
 }
+
+

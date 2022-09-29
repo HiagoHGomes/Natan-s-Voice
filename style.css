@@ -18,15 +18,19 @@ body {
 h1 {
     color: #FFF;
     margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 h2 {
     color: #fff;
     margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
 }
 
 .keys {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -43,8 +47,9 @@ h2 {
     font-weight: bold;
 }
 .key.active {
-    border: 2px solid #FF0;
-    color: #FF0;
+    border: 2px solid rgb(255, 255, 0);
+    color: gray;
+    background-color: rgba(255, 255, 0, 0.5);
 }
 
 .composer {
@@ -71,10 +76,63 @@ h2 {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-footer, a{
 
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+footer, a{
     margin-top: 20px;
     color: #FFF;
     font-size: 13px;
 }
 
+footer:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* Legendas: */
+
+.legendas {
+    list-style:none;
+    float:left;
+    }
+.legendas li{
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+    }
+
+.legendas li{
+    margin-top: 15px;
+    border-radius: 5px;
+    color:white; 
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+}
+
+.legendas li:hover{
+background:rgba(0, 0, 0, 0.5);;
+color:#fff;
+
+    }
+
+.legendas li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.5);;
+    display:none;
+    }
+
+    .legendas li:hover ul, .legendas li.over ul{
+        display:block;
+    }
+
+    .legendas li ul li{
+        display:block;
+        width:150px;
+        }
