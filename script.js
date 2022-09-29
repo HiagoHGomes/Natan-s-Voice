@@ -9,13 +9,13 @@ document.querySelectorAll('.key').forEach(element => {
     })
   });
 
-document.querySelector('.composer button').addEventListener('click', ()=> {
-    let song = document.querySelector('#input').value;
-    if(song !== '') {
-        let songArray = song.split('');
-        playComposition(songArray);
-    }
-});
+// document.querySelector('.composer button').addEventListener('click', ()=> {
+//     let song = document.querySelector('#input').value;
+//     if(song !== '') {
+//         let songArray = song.split('');
+//         playComposition(songArray);
+//     }
+// });
 
 function playSound(sound) {
     let audioElement = document.querySelector(`#s_${sound}`);
